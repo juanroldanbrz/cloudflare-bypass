@@ -24,7 +24,7 @@ public class CHttpRequester {
         ));
   }
 
-  public Document getUrlTowardsCloud(String uri)
+  public Document get(String uri)
       throws URISyntaxException, IOException, InterruptedException, ScriptException {
     Document response = Jsoup.connect(uri)
         .timeout(TIMEOUT)

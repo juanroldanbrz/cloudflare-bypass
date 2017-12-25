@@ -17,7 +17,7 @@ public class CJavascriptChallengeHelper {
 
   private final ScriptEngine scriptEngine;
 
-  private CJavascriptChallengeHelper(ScriptEngine scriptEngine) {
+  public CJavascriptChallengeHelper(ScriptEngine scriptEngine) {
     this.scriptEngine = scriptEngine;
   }
 

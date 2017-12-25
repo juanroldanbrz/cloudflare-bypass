@@ -2,8 +2,6 @@ package com.yamajun.cloudbypass;
 
 import java.util.HashMap;
 import java.util.Map;
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 import org.jsoup.nodes.Document;
 
@@ -19,7 +17,8 @@ public class CChallengeResolve {
     this.cRegexHelper = cRegexHelper;
   }
 
-  public Map<String, String> getPathParams(Document response, String domain) throws ScriptException {
+  public Map<String, String> getPathParams(Document response, String domain)
+      throws ScriptException {
     Map<String, String> paramMap = new HashMap<>();
     paramMap.put(CHALLENGE_1_KEY,
         response.getElementsByAttributeValue("name", CHALLENGE_1_KEY).val());
@@ -30,7 +29,8 @@ public class CChallengeResolve {
     return paramMap;
   }
 
-  private String resolveJavascriptChallenge(Document response, String domain) throws ScriptException {
+  private String resolveJavascriptChallenge(Document response, String domain)
+      throws ScriptException {
     String js = response.getElementsByTag("script").html();
     return String.valueOf(cRegexHelper.solveChallenge(js) + domain.length());
   }
