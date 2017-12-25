@@ -1,4 +1,4 @@
-# This is a experimental project, and it works fine on 25-12-2017
+# This is an experimental project, and it works fine on 25-12-2017
 
 # Cloudflare java bypass
 This is an experimental project which can be used in order to get the content of a site protected by cloudflare.
